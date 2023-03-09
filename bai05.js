@@ -1,0 +1,11 @@
+"use strict";
+exports.__esModule = true;
+var readline_sync_1 = require("readline-sync");
+var a = Number((0, readline_sync_1.question)("Nhap a: "));
+var chucNghin = Math.floor(a / 10000);
+var nghin = Math.floor((a - chucNghin * 10000) / 1000);
+var tram = Math.floor((a - chucNghin * 10000 - nghin * 1000) / 100);
+var chuc = Math.floor((a - chucNghin * 10000 - nghin * 1000 - tram * 100) / 10);
+var donVi = a % 10;
+var nut = (chucNghin + nghin + tram + chuc + donVi) % 10;
+console.log(nut);
